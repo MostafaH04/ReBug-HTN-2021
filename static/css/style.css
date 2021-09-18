@@ -178,3 +178,10 @@ input:hover{
     background-color: yellow;
     color: tomato;
 }
+
+.event-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
