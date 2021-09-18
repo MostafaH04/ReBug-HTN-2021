@@ -1,6 +1,7 @@
 import os
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
+import uuid
 
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
@@ -27,8 +28,8 @@ def upload_file():
         if file.filename == '':
             return redirect(request.url)
         if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            fileName = str(uuid.uuid4())+".jpg"
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], fileName))
             return render_template("thanks.html")
     return render_template("report.html")
 
