@@ -26,9 +26,9 @@ header {
   align-items: center;
 }
 .bod h1 {
+  padding-bottom: 50px;
   font-size: 100px;
   color: tomato;
-  padding-bottom: 50px;
 }
 .bod h3 {
   font-size: 25px;
