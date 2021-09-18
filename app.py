@@ -2,7 +2,7 @@ import os
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 
-UPLOAD_FOLDER = 'S:\\VSCodeProjects\\ReBug-HTN2021\\uploads'
+UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 app = Flask("ReBug")
@@ -23,6 +23,7 @@ def upload_file():
         if 'file' not in request.files:
             return redirect(request.url)
         file = request.files['file']
+        location = request.form['location']
         if file.filename == '':
             return redirect(request.url)
         if file and allowed_file(file.filename):
