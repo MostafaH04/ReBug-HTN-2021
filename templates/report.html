@@ -7,16 +7,16 @@
 	
 	<title>ReBug</title>
 	
-	<link rel="stylesheet" href="style.css">
-    <script src="./index.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </head>
 <header>
     <div class = "logo">
-        <a href = "/index.html"><h1>ReBug</h1></a>
+        <a href = "/"><h1>ReBug</h1></a>
     </div>
     <div class = "nav-container">
-        <a id = "events-btn" href = "/volunteer.html">Events</a>
-        <a id = "request-btn" href = "/report.html">Report Garbage</a>
+        <a id = "events-btn" href = "volunteer">Events</a>
+        <a id = "request-btn" href = "report">Report Garbage</a>
     </div>
 </header>
 <script>getLocation();</script>
@@ -24,7 +24,7 @@
     <h1 style = "margin:50px; margin-bottom: 20px; color:tomato; font-size: 50px; font-weight: bolder;">See waste at your local park?</h1>
     <h3 style = "margin-bottom: 50px;font-size: 23px;">Request a clean up event, and we will take care of the rest!</h3>
     <form method=post enctype=multipart/form-data>
-    <input type="file" id = "files" style = "visibility: hidden; width: 0px; margin:0;padding:0;">
+    <input type="file" name=file id = "files" style = "visibility: hidden; width: 0px; margin:0;padding:0;">
     <label for="files" class = "upload">Upload Image</label>
     <div id="map" style = "width: 335px; height: 335px; padding: 40px; margin:20px;"></div>
     <label for="loc" style = "font-size: 20px; font-weight: bold;">Location (type address if marker is incorrect)</label><br><br>
