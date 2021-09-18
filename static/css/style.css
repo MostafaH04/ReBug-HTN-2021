@@ -1,187 +1,186 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: montserrat;
-    text-decoration: none;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
+  text-decoration: none;
+  text-align: center;
 }
 
 header {
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:space-between;
-    padding:25px;
-    padding-right: 50px;
-    padding-left: 50px;
-    background-color: rgb(255, 132, 132);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  padding-right: 50px;
+  padding-left: 50px;
+  background-color: rgb(255, 132, 132);
 }
 
 .bod {
-    margin:100px;
-    display: flex;
-    height: 50vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  margin: 100px;
+  display: flex;
+  height: 50vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.bod h1{
-    font-size: 100px;
-    color:tomato;
-    padding-bottom: 50px;
+.bod h1 {
+  font-size: 100px;
+  color: tomato;
+  padding-bottom: 50px;
 }
 .bod h3 {
-    font-size: 25px;
-    padding-bottom: 30px;
+  font-size: 25px;
+  padding-bottom: 30px;
 }
 
-.logo a{
-    text-decoration: none;
-    color: white;
-    font-weight: 2000;
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-weight: 2000;
 }
 
-.logo a:hover{
-    color:rgb(255, 251, 0);
-    transition: linear;
-    transition-duration: 0.2s;
+.logo a:hover {
+  color: rgb(255, 251, 0);
+  transition: linear;
+  transition-duration: 0.2s;
 }
 
 .nav-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 .nav-container a {
-    font-family:monospace;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left:35px;
-    font-weight: 3000;
-    font-size: 20px;
-    color:rgb(255, 251, 0);
-    transition: linear;
-    transition-duration: 0.2s;
+  font-family: monospace;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 35px;
+  font-weight: 3000;
+  font-size: 20px;
+  color: rgb(255, 251, 0);
+  transition: linear;
+  transition-duration: 0.2s;
 }
 
 .nav-container a:hover {
-    transition: linear;
-    transition-duration: 0.2s;
-    color:white;
+  transition: linear;
+  transition-duration: 0.2s;
+  color: white;
 }
 
 #request-btn {
-    background-color: white;
-    color:tomato;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 25px;
+  background-color: white;
+  color: tomato;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 25px;
 }
 
 #request-btn:hover {
-    color:white;
-    background-color: tomato;
-    transition: linear;
-    transition-duration: 0.2s;
+  color: white;
+  background-color: tomato;
+  transition: linear;
+  transition-duration: 0.2s;
 }
 
-.bod #request-btn{
-    background-color: tomato;
-    color:white;
-    transition: linear;
-    transition-duration: 0.2s;
-    font-size: 25px;
-    font-weight: bold;
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 50px;
+.bod #request-btn {
+  background-color: tomato;
+  color: white;
+  transition: linear;
+  transition-duration: 0.2s;
+  font-size: 25px;
+  font-weight: bold;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 50px;
 }
 
-.bod #request-btn:hover{
-    background-color: rgb(232, 255, 24);
-    color:rgb(255, 84, 53);
-    transition: linear;
-    transition-duration: 0.2s;
+.bod #request-btn:hover {
+  background-color: rgb(232, 255, 24);
+  color: rgb(255, 84, 53);
+  transition: linear;
+  transition-duration: 0.2s;
 }
 
 #map {
-    height: 400px;
-    width: 100%;
+  height: 400px;
+  width: 100%;
 }
 
 input {
-    display: inline-block;
-    border: none;
-    padding: 1rem 2rem;
-    margin: 0;
-    text-decoration: none;
-    background: #0069ed;
-    color: #ffffff;
-    font-family: sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-    text-align: center;
-    transition: background 250ms ease-in-out, 
-                transform 150ms ease;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: #0069ed;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 input {
-    display: inline-block;
-    border: none;
-    padding: 1rem 2rem;
-    margin: 0;
-    border-radius: 30px;
-    text-decoration: none;
-    background: tomato;
-    color: #ffffff;
-    font-family: sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-    text-align: center;
-    transition: 250ms ease-in-out;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  border-radius: 30px;
+  text-decoration: none;
+  background: tomato;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: 250ms ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-input:hover{
-    background-color: yellow;
-    color: tomato;
+input:hover {
+  background-color: yellow;
+  color: tomato;
 }
 
 .upload {
-    display: inline-block;
-    border: none;
-    padding: 1rem 10rem;
-    margin: 0;
-    text-decoration: none;
-    background: tomato;
-    color: #ffffff;
-    font-family: sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-    text-align: center;
-    transition: 250ms ease-in-out;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+  display: inline-block;
+  border: none;
+  padding: 1rem 10rem;
+  margin: 0;
+  text-decoration: none;
+  background: tomato;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: 250ms ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-.upload:hover{
-    background-color: yellow;
-    color: tomato;
+.upload:hover {
+  background-color: yellow;
+  color: tomato;
 }
 
-.event-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+.event-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
