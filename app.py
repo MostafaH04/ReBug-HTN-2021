@@ -4,6 +4,7 @@ from werkzeug.utils import secure_filename
 import uuid
 from database import dataBase
 import datetime
+import storage
 
 db = dataBase()
 
@@ -38,6 +39,7 @@ def upload_file():
             time = str(datetime.datetime.now() + datetime.timedelta(weeks=1))
             time = time[:time.index(" ")]
             db.add(location, 10, time)
+            storage.upload(location)
             return render_template("thanks.html")
     data, keys = db.get()
     return render_template("report.html")
