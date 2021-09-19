@@ -5,6 +5,7 @@ import uuid
 from database import dataBase
 import datetime
 import storage
+import random
 
 db = dataBase()
 
@@ -60,3 +61,9 @@ def volunteer():
         information = request.form["Sign Up!"].split("||")
         return render_template("signup.html", data = information, loc = information[0], date = information[1])
     return render_template("volunteer.html")
+
+if __name__ == "__main__":  
+	app.run( 
+		host='0.0.0.0',  
+		port=5504
+	)

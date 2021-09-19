@@ -15,8 +15,7 @@ firebase = pyrebase.initialize_app(config)
 storage = firebase.storage()
 
 def upload(location) -> None:
-  storage.child(f"uploads/{location}/0.jpg").put(recent)
-  os.remove(recent)
+  storage.child(recent).put(recent)
   
 
 def download(location) -> None:
