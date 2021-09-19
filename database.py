@@ -25,3 +25,14 @@ class dataBase():
         with open('./static/json/template.json', 'w') as f:
             json.dump(data, f)
         return data,list(data.keys())
+    
+    def addUser(self, name, age, email, location, date):
+        ref2 = db.reference("/Users")
+        someUser = {
+            "name":name,
+            "age":age,
+            "email":email,
+            "location":location,
+            "date":date
+        }
+        ref2.push(someEvent)

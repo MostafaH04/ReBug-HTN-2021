@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!--report.html-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>ReBug</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<header>
+    <div class = "logo">
+        <a href = "/"><h1>ReBug</h1></a>
+    </div>
+    <div class = "nav-container">
+        <a id = "events-btn" href = "volunteer">Events</a>
+        <a id = "request-btn" href = "report">Report Garbage</a>
+    </div>
+</header> 
+<body>
+    <div style = "margin:20px;">
+        {% for line in data %}
+        <h1>{{ line }}</h1>
+        {% endfor %}
+    </div>
+    <form method=post enctype=multipart/form-data>
+        <input type="text" id="loc" name="name" value = "name" style = "border-radius: 0px; background-color: rgb(177, 177, 177); color:black"><br><br>
+        <input type="number" id="loc" name="age" value = "20" style = "border-radius: 0px; background-color: rgb(177, 177, 177); color:black"><br><br>
+        <input type="email" id="loc" name="email" value = "someemail@something.com" style = "border-radius: 0px; background-color: rgb(177, 177, 177); color:black"><br><br>
+        <input type=submit name = "submit volunteer" value="Submit Info" class = "sub-btn" style = "margin-bottom: 200px;">
+    </form>
+</body>

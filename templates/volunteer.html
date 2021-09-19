@@ -30,7 +30,7 @@
               let currData = data[i]
               const newDiv = document.createElement("div");
               newDiv.classList.add('test-container');
-              newDiv.style.cssText += "background-color: rgb(255, 216, 216); overflow: hidden; width: 180px;height: 200px;margin: 10px;border-radius: 25px;display: flex;flex-direction: column;justify-content: space-evenly;align-items: center;";
+              newDiv.style.cssText += "background-color: rgb(255, 216, 216); overflow: hidden; width: 180px;height: 300px;margin: 10px;border-radius: 25px;display: flex;flex-direction: column;justify-content: space-evenly;align-items: center;";
               const location = document.createTextNode(currData['Location']);
               const volunteers = document.createTextNode(currData['People needed'] + " Needed!");
               const date = document.createTextNode(currData['Time of clean up']);
@@ -41,12 +41,23 @@
               const newP1 = document.createElement("p");
               const newP2 = document.createElement("p");
               const newP3 = document.createElement("p");
-              newP1.appendChild(location)
-              newP2.appendChild(volunteers)
-              newP3.appendChild(date)
+              const newForm = document.createElement("form");
+              newForm.setAttribute("method", "post");
+              newForm.setAttribute("enctype", "multipart/form-data");
+              const newButton = document.createElement("button");
+              newButton.setAttribute('type', 'submit');
+              newButton.setAttribute('value', currData['Location'] + "||" + currData['Time of clean up'] + "||Needed: " + currData['People needed']);
+              newButton.setAttribute('name', "Sign Up!");
+              newButton.style.cssText += "width:100px; height:30px; background-color:red; color: yellow;";
+              newButton.append(document.createTextNode("Sign Up!"));
+              newForm.appendChild(newButton);
+              newP1.appendChild(location);
+              newP2.appendChild(volunteers);
+              newP3.appendChild(date);
               newDiv.appendChild(newP1);
               newDiv.appendChild(newP2);
               newDiv.appendChild(newP3);
+              newDiv.appendChild(newForm);
               const currentDiv = document.getElementsByClassName("event-container");
               currentDiv[0].appendChild(newDiv);
             }

@@ -24,14 +24,14 @@
     <h1 style = "margin:50px; margin-bottom: 20px; color:tomato; font-size: 50px; font-weight: bolder;">See waste at your local park?</h1>
     <h3 style = "margin-bottom: 50px;font-size: 23px;">Request a clean up event, and we will take care of the rest!</h3>
     <form method=post enctype=multipart/form-data>
-    <input type="file" name=file id = "files" style = "visibility: hidden; width: 0px; margin:0;padding:0;">
-    <label for="files" class = "upload">Upload Image</label>
-    <div id="map" style = "width: 335px; height: 335px; padding: 40px; margin:20px;"></div>
-    <label for="loc" style = "font-size: 20px; font-weight: bold;">Location (type address if marker is incorrect)</label><br><br>
-    <input type="text" id="loc" name="location" value = "Location" style = "border-radius: 0px; background-color: rgb(177, 177, 177); color:black"><br><br>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAko4UiTLyDStjWQEVt5kGMgrpYs9msqqA&callback=initMap&libraries=&v=weekly" async
-    ></script>
-    <input type=submit value="Submit Info" class = "sub-btn" style = "margin-bottom: 200px;">
+        <input type="file" name=file id = "files" style = "visibility: hidden; width: 0px; margin:0;padding:0;">
+        <label for="files" class = "upload">Upload Image</label>
+        <div id="map" style = "width: 335px; height: 335px; padding: 40px; margin:20px;"></div>
+        <label for="loc" style = "font-size: 20px; font-weight: bold;">Location (type address if marker is incorrect)</label><br><br>
+        <input type="text" id="loc" name="location" value = "Location" style = "border-radius: 0px; background-color: rgb(177, 177, 177); color:black"><br><br>
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAko4UiTLyDStjWQEVt5kGMgrpYs9msqqA&callback=initMap&libraries=&v=weekly" async
+        ></script>
+        <input type=submit value="Submit Info" class = "sub-btn" style = "margin-bottom: 200px;">
     </form>
 </div>
