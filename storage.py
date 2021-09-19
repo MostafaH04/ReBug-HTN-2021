@@ -1,11 +1,12 @@
 import glob
 import os
 import pyrebase
-
 path = "uploads/*jpg"
 files = sorted(glob.iglob(path), key=os.path.getctime,reverse=True)
 
 recent = files[0]
+
+print(recent)
 
 config = {
   'apiKey': "AIzaSyC1DIqvIw_BEdLhWzdlF301BWWmbuNhyhA",
@@ -19,4 +20,4 @@ config = {
 firebase = pyrebase.initialize_app(config)
 storage = firebase.storage()
 
-storage.child(recent).put(recent)
+storage.child(recent.replace("uploads\\", "")).put(recent)
