@@ -1,3 +1,5 @@
+[![Banner](https://media.discordapp.net/attachments/680909766104449042/889154975710720030/unknown.png?width=721&height=525width=1440&height=376)](https://devpost.com/software/rebug)
+
 # Inspiration
 Walking around our communities, we often find them ruined by scattered garbage and waste, that requires looking after and cleaning up. One solution to this was often community park clean-ups, however, they often tend to be very inconstant, and difficult to initialize
 
