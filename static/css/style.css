@@ -184,3 +184,15 @@ input:hover {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.test-container {
+  background-color: rgb(255, 216, 216);
+  width: 180px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}

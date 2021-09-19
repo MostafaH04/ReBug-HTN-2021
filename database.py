@@ -5,7 +5,7 @@ import json
 
 class dataBase():
     def __init__(self):
-        cred = credentials.Certificate("./rebug-aecaa-firebase-adminsdk-wg3tm-fa43c244bc.json")
+        cred = credentials.Certificate("serviceAccountKey.json")
         default_app = firebase_admin.initialize_app(cred, {
             'databaseURL':"https://rebug-aecaa-default-rtdb.firebaseio.com/"
             })
@@ -22,9 +22,6 @@ class dataBase():
 
     def get(self):
         data = self.ref.get()
-        with open('template.json', 'w') as f:
+        with open('./static/json/template.json', 'w') as f:
             json.dump(data, f)
         return data,list(data.keys())
-
-db = dataBase()
-print(db.get())

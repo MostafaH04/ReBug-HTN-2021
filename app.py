@@ -2,6 +2,10 @@ import os
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 import uuid
+from database import dataBase
+import datetime
+
+db = dataBase()
 
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
@@ -15,6 +19,7 @@ def allowed_file(filename):
 
 @app.route("/")
 def home():
+    data, keys = db.get()
     return render_template('index.html')
 
 
@@ -30,9 +35,14 @@ def upload_file():
         if file and allowed_file(file.filename):
             fileName = str(uuid.uuid4())+".jpg"
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], fileName))
+            time = str(datetime.datetime.now() + datetime.timedelta(weeks=1))
+            time = time[:time.index(" ")]
+            db.add(location, 10, time)
             return render_template("thanks.html")
+    data, keys = db.get()
     return render_template("report.html")
 
 @app.route("/volunteer")
 def volunteer():
+    data, keys = db.get()
     return render_template("volunteer.html")
