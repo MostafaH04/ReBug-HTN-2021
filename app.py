@@ -47,18 +47,14 @@ currentEvent = None
 @app.route("/volunteer", methods=['GET', 'POST'])
 def volunteer():
     data, keys = db.get()
-    global currentEvent
     if request.method == 'POST':
-        try:
+        if "submit volunteer" in request.form:
             if request.form['submit volunteer'] == "Submit Info":
                 name = request.form['name']
                 age = request.form['age']
                 email = request.form['email']
-                db.addUser(name, age, email, currentEvent[0],currentEvent[1])
+                db.addUser(name, age, email)
                 return render_template("volunteer.html")
-        except:
-            print("sad")
         information = request.form["Sign Up!"].split("||")
-        currentEvent = information
-        return render_template("signup.html", data = information)
+        return render_template("signup.html", data = information, loc = information[0], date = information[1])
     return render_template("volunteer.html")

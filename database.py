@@ -26,13 +26,11 @@ class dataBase():
             json.dump(data, f)
         return data,list(data.keys())
     
-    def addUser(self, name, age, email, location, date):
+    def addUser(self, name, age, email):
         ref2 = db.reference("/Users")
         someUser = {
             "name":name,
             "age":age,
-            "email":email,
-            "location":location,
-            "date":date
+            "email":email
         }
-        ref2.push(someEvent)
+        ref2.push(someUser)
