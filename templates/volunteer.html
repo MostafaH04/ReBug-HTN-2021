@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   </head>
   <body style="margin-bottom: 150px">
     <header>
@@ -22,150 +23,35 @@
     </header>
     <h1 style="margin: 40px; font-weight: 1000">Spots</h1>
     <div class="event-container" style="margin: 25px">
-      <div
-        class="test-container"
-        style="
-          background-color: rgb(255, 216, 216);
-          width: 180px;
-          height: 200px;
-          margin: 10px;
-          border-radius: 25px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-        "
-      >
-        <img src="../sample.jpg" style="object-fit: cover; width: 150px; height: 100px" />
-        <p>Location Location</p>
-        <h3>Spot A</h3>
-      </div>
-      <div
-        class="test-container"
-        style="
-          background-color: rgb(255, 216, 216);
-          width: 180px;
-          height: 200px;
-          margin: 10px;
-          border-radius: 25px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-        "
-      >
-        <img src="../sample.jpg" style="object-fit: cover; width: 150px; height: 100px" />
-        <p>Location Location</p>
-        <h3>Spot A</h3>
-      </div>
-      <div
-        class="test-container"
-        style="
-          background-color: rgb(255, 216, 216);
-          width: 180px;
-          height: 200px;
-          margin: 10px;
-          border-radius: 25px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-        "
-      >
-        <img src="../sample.jpg" style="object-fit: cover; width: 150px; height: 100px" />
-        <p>Location Location</p>
-        <h3>Spot A</h3>
-      </div>
-      <div
-        class="test-container"
-        style="
-          background-color: rgb(255, 216, 216);
-          width: 180px;
-          height: 200px;
-          margin: 10px;
-          border-radius: 25px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-        "
-      >
-        <img src="../sample.jpg" style="object-fit: cover; width: 150px; height: 100px" />
-        <p>Location Location</p>
-        <h3>Spot A</h3>
-      </div>
-      <div
-        class="test-container"
-        style="
-          background-color: rgb(255, 216, 216);
-          width: 180px;
-          height: 200px;
-          margin: 10px;
-          border-radius: 25px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-        "
-      >
-        <img src="../sample.jpg" style="object-fit: cover; width: 150px; height: 100px" />
-        <p>Location Location</p>
-        <h3>Spot A</h3>
-      </div>
-      <div
-        class="test-container"
-        style="
-          background-color: rgb(255, 216, 216);
-          width: 180px;
-          height: 200px;
-          margin: 10px;
-          border-radius: 25px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-        "
-      >
-        <img src="../sample.jpg" style="object-fit: cover; width: 150px; height: 100px" />
-        <p>Location Location</p>
-        <h3>Spot A</h3>
-      </div>
-      <div
-        class="test-container"
-        style="
-          background-color: rgb(255, 216, 216);
-          width: 180px;
-          height: 200px;
-          margin: 10px;
-          border-radius: 25px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-        "
-      >
-        <img src="../sample.jpg" style="object-fit: cover; width: 150px; height: 100px" />
-        <p>Location Location</p>
-        <h3>Spot A</h3>
-      </div>
-      <div
-        class="test-container"
-        style="
-          background-color: rgb(255, 216, 216);
-          width: 180px;
-          height: 200px;
-          margin: 10px;
-          border-radius: 25px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-        "
-      >
-        <img src="../sample.jpg" style="object-fit: cover; width: 150px; height: 100px" />
-        <p>Location Location</p>
-        <h3>Spot A</h3>
-      </div>
+      <script>
+        $.getJSON("{{ url_for('static', filename='json/template.json') }}", function(json) {
+            let data = Object.values(json);
+            for (let i = 0, n = data.length; i < n; i++){
+              let currData = data[i]
+              const newDiv = document.createElement("div");
+              newDiv.classList.add('test-container');
+              newDiv.style.cssText += "background-color: rgb(255, 216, 216); overflow: hidden; width: 180px;height: 200px;margin: 10px;border-radius: 25px;display: flex;flex-direction: column;justify-content: space-evenly;align-items: center;";
+              const location = document.createTextNode(currData['Location']);
+              const volunteers = document.createTextNode(currData['People needed'] + " Needed!");
+              const date = document.createTextNode(currData['Time of clean up']);
+              let img = document.createElement("img")
+              img.src = "{{ url_for('static', filename='image/sample.jpg') }}"
+              img.style.cssText += "object-fit: cover; width: 150px; height: 100px; border-radius:15px;";
+              newDiv.appendChild(img);
+              const newP1 = document.createElement("p");
+              const newP2 = document.createElement("p");
+              const newP3 = document.createElement("p");
+              newP1.appendChild(location)
+              newP2.appendChild(volunteers)
+              newP3.appendChild(date)
+              newDiv.appendChild(newP1);
+              newDiv.appendChild(newP2);
+              newDiv.appendChild(newP3);
+              const currentDiv = document.getElementsByClassName("event-container");
+              currentDiv[0].appendChild(newDiv);
+            }
+        });
+      </script>
     </div>
   </body>
 </html>
