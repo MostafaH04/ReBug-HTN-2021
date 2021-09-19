@@ -20,9 +20,4 @@ Doing this project, we learned a lot about web dev. All of us being complete beg
 Switching to React to make ReBug look nicer, as well as more functional. Implementing a login system for volunteers, with a dashboard to track their volunteer hours. Adding ML to ensure that images submitted, contain garbage in them, and prevent duplicates of an image from being uploaded.
 
 # Built With
-* ![css3](https://raw.githubusercontent.com/yurijserrano/Github-Profile-Readme-Logos/f994c418a134b58c4aec11152f6a4a33fa89da26/others/css.svg)
-* ![firebase](https://raw.githubusercontent.com/yurijserrano/Github-Profile-Readme-Logos/f994c418a134b58c4aec11152f6a4a33fa89da26/cloud/firebase.svg)
-* Flask
-* ![html5](https://raw.githubusercontent.com/yurijserrano/Github-Profile-Readme-Logos/f994c418a134b58c4aec11152f6a4a33fa89da26/others/html.svg)
-* ![javascript](https://raw.githubusercontent.com/yurijserrano/Github-Profile-Readme-Logos/f994c418a134b58c4aec11152f6a4a33fa89da26/programming%20languages/javascript.svg)
-* ![python](https://raw.githubusercontent.com/yurijserrano/Github-Profile-Readme-Logos/f994c418a134b58c4aec11152f6a4a33fa89da26/programming%20languages/python.svg)
+css3 - firebase - flask - html5 - javascript - python
